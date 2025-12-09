@@ -33,6 +33,7 @@ const benefits = [
 
 const Benefits = () => {
   return (
+  
     <section className="section-padding bg-background">
       <div className="container mx-auto max-w-6xl">
         <motion.div
@@ -94,6 +95,59 @@ const Benefits = () => {
           ))}
         </div>
       </div>
+      {/* SEÇÃO TRANSFORMAÇÃO — SUAVE E PREMIUM */}
+<section className="py-16 flex justify-center px-4">
+
+  <div className="relative w-full max-w-md rounded-3xl p-8 
+      bg-gradient-to-b from-pink-100 via-purple-100 to-pink-50
+      text-gray-900 shadow-lg">
+
+    {/* TÍTULO */}
+    <h2 className="text-xl font-bold text-center leading-tight mb-6 text-gray-800">
+      Mudança rápida,  
+      <br />
+      resultados reais.
+    </h2>
+
+    {/* LISTA EM DUAS COLUNAS */}
+    <div className="grid grid-cols-2 gap-4 text-sm font-medium text-gray-700">
+
+      <div className="flex items-start gap-2">
+        <span className="text-purple-500">✔️</span> <span>Mais energia</span>
+      </div>
+
+      <div className="flex items-start gap-2">
+        <span className="text-purple-500">✔️</span> <span>Corpo leve</span>
+      </div>
+
+      <div className="flex items-start gap-2">
+        <span className="text-purple-500">✔️</span> <span>Ansiedade baixa</span>
+      </div>
+
+      <div className="flex items-start gap-2">
+        <span className="text-purple-500">✔️</span> <span>Hábito fixando</span>
+      </div>
+
+      <div className="flex items-start gap-2">
+        <span className="text-purple-500">✔️</span> <span>Peso caindo</span>
+      </div>
+
+      <div className="flex items-start gap-2">
+        <span className="text-purple-500">✔️</span> <span>Sem sofrimento</span>
+      </div>
+
+    </div>
+
+    {/* FRASE FINAL */}
+    <div className="mt-8 bg-white/70 p-4 rounded-2xl text-center text-sm leading-relaxed text-gray-700 shadow-sm">
+      O segredo é repetir.  
+      <br />
+      Um pouco por dia muda tudo.
+    </div>
+
+  </div>
+</section>
+
     </section>
   );
 };

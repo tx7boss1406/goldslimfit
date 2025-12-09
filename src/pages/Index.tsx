@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { toast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import PainSection from "@/components/PainSection";
 import Benefits from "@/components/Benefits";
 import HowItWorks from "@/components/HowItWorks";
 import QuizModal from "@/components/Quiz/QuizModal";
@@ -61,8 +62,10 @@ const Index = () => {
       
       <Hero onStartQuiz={handleStartQuiz} />
       
+      <PainSection />
+
       <Benefits />
-      
+
       <HowItWorks onStartQuiz={handleStartQuiz} />
       
       <Offer onCheckout={handleCheckout} />

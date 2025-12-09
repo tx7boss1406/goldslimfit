@@ -111,7 +111,7 @@ const Simulator = ({ isOpen, onClose, quizResult, onViewOffer }: SimulatorProps)
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
               >
-                <div className="phone-screen aspect-[9/16]">
+               <div className="phone-screen w-full min-h-[560px] rounded-[32px] bg-background relative overflow-y-auto overflow-x-hidden">
                   <AnimatePresence mode="wait">
                     {activeScreen === 0 && (
                       <motion.div
@@ -163,7 +163,8 @@ const Simulator = ({ isOpen, onClose, quizResult, onViewOffer }: SimulatorProps)
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.1 }}
-    className="bg-card rounded-2xl p-5 shadow-lg border border-primary/30 relative overflow-hidden"
+    className="bg-card rounded-2xl p-5 shadow-lg border border-primary/30 relative
+"
   >
     <div className="absolute top-0 right-0 bg-primary/10 w-20 h-20 rounded-bl-full opacity-40" />
     
@@ -192,61 +193,31 @@ const Simulator = ({ isOpen, onClose, quizResult, onViewOffer }: SimulatorProps)
     </button>
   </motion.div>
 
-  {/* CARD 2 */}
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.15 }}
-    className="bg-card rounded-2xl p-5 shadow-lg border border-border/50 relative overflow-hidden"
-  >
-    <div className="absolute top-0 right-0 bg-accent/20 w-20 h-20 rounded-bl-full opacity-40" />
-
-    <div className="flex items-start gap-4 relative z-10">
-      <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center">
-        <Clock className="w-6 h-6 text-primary" />
-      </div>
-
-      <div className="flex-1">
-        <p className="font-semibold text-foreground text-sm">Alongamento Matinal</p>
-        <p className="text-xs text-muted-foreground">5 min • Flexibilidade</p>
-      </div>
-
-      {/* Marcado como concluído */}
-      <div className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center">
-        <Check className="w-4 h-4 text-primary" />
-      </div>
+  
+  {/* CARD — Alongamento Matinal */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.2 }}
+  className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-5 border border-primary/30 shadow-lg"
+>
+  <div className="flex items-start gap-4">
+    <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
+      <Sparkles className="w-6 h-6 text-primary" />
     </div>
 
-    {/* Badge de concluído */}
-    <div className="mt-3 text-xs text-primary font-medium flex items-center gap-1 bg-primary/10 px-2 py-1 rounded-lg w-max">
-      <Check className="w-3 h-3" />
-      Concluída
+    <div className="flex-1">
+      <p className="font-semibold text-foreground text-sm">Alongamento Matinal</p>
+      <p className="text-xs text-muted-foreground">5 min • Flexibilidade</p>
     </div>
-  </motion.div>
+  </div>
 
-  {/* CARD 3 — Missão Premium */}
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.2 }}
-    className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-5 border border-primary/30 shadow-lg"
-  >
-    <div className="flex items-start gap-4">
-      <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
-        <Sparkles className="w-6 h-6 text-primary" />
-      </div>
-
-      <div className="flex-1">
-        <p className="font-semibold text-foreground text-sm">Missão Premium</p>
-        <p className="text-xs text-muted-foreground">Destravada ao completar 3 tarefas</p>
-      </div>
-    </div>
-
-    {/* Bloqueado */}
-    <button className="mt-4 w-full bg-primary/20 text-primary font-medium py-2 rounded-xl text-sm shadow hover:bg-primary/30 transition">
-      Bloqueada — complete mais missões
+  {/* Botão iniciar */}
+    <button className="mt-4 w-full bg-primary text-primary-foreground py-2 rounded-xl font-medium text-sm shadow hover:opacity-90 transition">
+      Iniciar missão
     </button>
-  </motion.div>
+</motion.div>
+
 
 </div>
 

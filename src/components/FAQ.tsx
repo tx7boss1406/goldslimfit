@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "Como funciona a garantia?",
-    answer: "Se você completar as missões do primeiro mês e não perceber melhoria na sua rotina, devolvemos 100% do valor pago. Sem burocracia.",
+    answer: "Se você completar as missões do primeiro mês e não perceber melhoria na sua rotina, devolvemos 50% do valor pago. Sem burocracia.",
   },
   {
     question: "Posso usar em mais de um dispositivo?",

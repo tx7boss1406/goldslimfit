@@ -34,16 +34,17 @@ const Hero = ({ onStartQuiz }: HeroProps) => {
               <span className="text-sm text-muted-foreground">+12.000 mulheres já transformaram sua rotina</span>
             </motion.div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-4">
-              Faça da consistência{" "}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-  um hábito
-</span>
-            </h1>
+           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug sm:leading-tight mb-4">
+  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+    Você não precisa tentar algo novo.
+  </span>{" "}
+  <span className="text-foreground/90">
+    Só precisa conseguir continuar.
+  </span>
+</h1>
             
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0">
-              Um app com missões diárias, receitas personalizadas e recompensas. 
-              Sem fórmulas milagrosas — só prática guiada.
+              O SlimFit Pro é o app que faz você ter consistência mesmo quando a motivação acaba.
             </p>
             
             {/* Mini features */}
